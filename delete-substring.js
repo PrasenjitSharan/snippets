@@ -1,10 +1,10 @@
 // Delete a substring from a string
-function delSubStr(str, sub) {
-    var i = str.indexOf(sub);
+function replaceSubStr(str, o, n) {
+    var i = str.indexOf(o);
     if (i === -1) {} else {
-        str = str.substring(0, i) + str.substring((i + sub.length), str.length);
+        str = str.substring(0, i) + n + str.substring((i + o.length), str.length);
     }
     alert(str);
 }
 
-delSubStr('abcdef', 'ef');
+replaceSubStr('abcdef', 'cd', 'xy');
